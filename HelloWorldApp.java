@@ -1,8 +1,18 @@
 public class HelloWorldApp {
     public static void main(String[] args) {
 
-        String name = (args.length > 0) ? args[0] : "World";
-        System.out.println("Hello " + name);
+        if (args.length == 0) {
+            System.out.println("Hello World");
+        } else {
+            System.out.print("Hello ");
+            for (int i = 0; i < args.length; i++) {
+                System.out.print(args[i]);
+
+                if (i < args.length - 1) {
+                    System.out.print(" ");
+                }
+            }
+        }
 
     }
 }
